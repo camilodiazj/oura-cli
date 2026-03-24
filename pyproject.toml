@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oura-cli"
+version = "0.1.0"
+description = "CLI tool to access your Oura Ring data via OAuth2"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "cdiazjaimes" }]
+keywords = ["oura", "cli", "health", "wearable", "oauth2"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.1",
+    "requests>=2.25",
+    "keyring>=23.0",
+    "requests-oauthlib>=1.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/cdiazjaimes/oura-cli"
+Issues = "https://github.com/cdiazjaimes/oura-cli/issues"
+
+[project.scripts]
+oura = "oura_cli.cli:cli"
