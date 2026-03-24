@@ -40,7 +40,7 @@ def _default_dates(start: str | None, end: str | None) -> tuple[str, str]:
 
 COMMANDS = {
     "sleep": {
-        "endpoint": "/v2/usercollection/daily_sleep",
+        "endpoint": "/v2/usercollection/sleep",
         "formatter": "format_sleep",
         "help": "Daily sleep summary.",
     },

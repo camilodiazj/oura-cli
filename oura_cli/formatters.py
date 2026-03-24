@@ -39,15 +39,19 @@ def format_sleep(records: list[dict]) -> str:
     lines = []
     for r in records:
         day = r.get("day", "?")
-        score = r.get("score")
-        lines.append(f"\n  {day}  {_score_bar(score)}")
+        sleep_type = r.get("type", "")
+        header = f"\n  {day}"
+        if sleep_type and sleep_type != "sleep":
+            header += f"  ({sleep_type})"
+        lines.append(header)
         lines.append(f"    Total:      {_seconds_to_hm(r.get('total_sleep_duration'))}")
         lines.append(f"    Deep:       {_seconds_to_hm(r.get('deep_sleep_duration'))}")
         lines.append(f"    Light:      {_seconds_to_hm(r.get('light_sleep_duration'))}")
         lines.append(f"    REM:        {_seconds_to_hm(r.get('rem_sleep_duration'))}")
         lines.append(f"    Awake:      {_seconds_to_hm(r.get('awake_time'))}")
         lines.append(f"    Efficiency: {_val(r.get('efficiency'), '%')}")
-        lines.append(f"    Avg HR:     {_val(r.get('average_heart_rate'), ' bpm')}")
+        avg_hr = r.get('average_heart_rate')
+        lines.append(f"    Avg HR:     {_val(round(avg_hr, 1) if avg_hr else None, ' bpm')}")
         lines.append(f"    Avg HRV:    {_val(r.get('average_hrv'), ' ms')}")
         lines.append(f"    Lowest HR:  {_val(r.get('lowest_heart_rate'), ' bpm')}")
     return "Sleep" + "".join(lines)
@@ -181,8 +185,10 @@ def format_workouts(records: list[dict]) -> str:
         activity = r.get("activity", "?")
         intensity = r.get("intensity", "?")
         lines.append(f"\n  {day}  {activity} [{intensity}]")
-        lines.append(f"    Calories: {_val(r.get('calories'), ' kcal')}")
-        lines.append(f"    Distance: {_val(r.get('distance'), ' m')}")
+        cals = r.get('calories')
+        lines.append(f"    Calories: {_val(round(cals) if cals else None, ' kcal')}")
+        dist = r.get('distance')
+        lines.append(f"    Distance: {_val(round(dist) if dist else None, ' m')}")
         label = r.get("label")
         if label:
             lines.append(f"    Label:    {label}")
