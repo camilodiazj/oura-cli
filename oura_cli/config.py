@@ -11,7 +11,7 @@ DEFAULTS = {
     "auth_url": "https://cloud.ouraring.com/oauth/authorize",
     "token_url": "https://api.ouraring.com/oauth/token",
     "api_base": "https://api.ouraring.com",
-    "scopes": "email personal daily heartrate workout tag session spo2Daily",
+    "scopes": "email personal daily heartrate workout tag session spo2Daily stress heartHealth ringConfiguration",
 }
 
 
