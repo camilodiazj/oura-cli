@@ -26,8 +26,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/cdiazjaimes/oura-cli"
-Issues = "https://github.com/cdiazjaimes/oura-cli/issues"
+Homepage = "https://github.com/camilodiazj/oura-cli"
+Issues = "https://github.com/camilodiazj/oura-cli/issues"
 
 [project.scripts]
 oura = "oura_cli.cli:cli"

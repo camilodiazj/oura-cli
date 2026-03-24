@@ -21,7 +21,7 @@ CLI tool to access your Oura Ring data from the terminal. Uses OAuth2 for secure
 ### 2. Install
 
 ```bash
-git clone https://github.com/cdiazjaimes/oura-cli.git
+git clone https://github.com/camilodiazj/oura-cli.git
 cd oura-cli
 pip install -e .
 ```
