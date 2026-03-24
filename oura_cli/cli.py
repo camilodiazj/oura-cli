@@ -2,7 +2,7 @@
 
 import json
 import functools
-from datetime import date
+from datetime import date, timedelta
 
 import click
 
@@ -27,8 +27,13 @@ def data_options(f):
 
 
 def _default_dates(start: str | None, end: str | None) -> tuple[str, str]:
-    today = date.today().isoformat()
-    return start or today, end or today
+    """Return (start, end) dates. End date is shifted +1 day because Oura's API uses exclusive end dates."""
+    today = date.today()
+    s = start or today.isoformat()
+    e = end or today.isoformat()
+    # Oura API end_date is exclusive, so add 1 day to include the requested end date
+    end_date = date.fromisoformat(e) + timedelta(days=1)
+    return s, end_date.isoformat()
 
 
 # -- Data command factory ------------------------------------------------------

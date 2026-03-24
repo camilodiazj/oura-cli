@@ -28,10 +28,10 @@ class OuraClient:
             self._set_auth()
             resp = self._session.get(url, params=params, timeout=30)
 
-        if resp.status_code == 403:
+        if resp.status_code in (401, 403):
             raise SystemExit(
-                "Access forbidden. Your Oura subscription may have expired, "
-                "or this data type requires additional permissions."
+                "Access denied. Your token may lack the required scope, "
+                "or your Oura subscription has expired. Try: oura logout && oura login"
             )
         if resp.status_code == 429:
             raise SystemExit("Rate limit exceeded. Wait a few minutes and try again.")
