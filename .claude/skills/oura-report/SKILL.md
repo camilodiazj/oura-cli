@@ -19,7 +19,7 @@ Generate a complete daily health report from Oura Ring data.
    - `oura stress --start DATE --end DATE`
    - `oura resilience --start DATE --end DATE`
    - `oura workouts --start DATE --end DATE`
-3. Compile all results into a clean, structured report in Spanish.
+3. Compile all results into a clean, structured report in English.
 4. Add a brief health interpretation at the end:
    - Sleep: evaluate duration (ideal 7-9h), efficiency (>85% good), deep sleep (>1h ideal), REM (>1.5h ideal), HRV (higher is better)
    - Activity: evaluate steps, active calories, high activity time

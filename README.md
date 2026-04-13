@@ -139,10 +139,10 @@ Deep sleep analysis over a period. Evaluates sleep architecture (deep/light/REM 
 #### `/oura-training`
 Training readiness evaluation. Analyzes readiness, sleep quality, HRV trends, recent training load, and stress/recovery ratio to give a clear verdict:
 
-- **ENTRENA FUERTE** - All systems go
-- **ENTRENA MODERADO** - Mixed signals, keep intensity in check
-- **RECUPERACION ACTIVA** - Light movement only
-- **DESCANSA** - Multiple red flags, take the day off
+- **TRAIN HARD** - All systems go
+- **TRAIN MODERATE** - Mixed signals, keep intensity in check
+- **ACTIVE RECOVERY** - Light movement only
+- **REST** - Multiple red flags, take the day off
 
 ```
 > /oura-training

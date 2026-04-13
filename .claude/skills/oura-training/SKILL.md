@@ -25,11 +25,11 @@ Evaluate whether the user is ready to train based on Oura Ring recovery data.
    - **Recent training load**: workouts in last 48h, intensity, calories burned
    - **Stress/Recovery ratio**: high recovery = ready, high stress = needs rest
    - **Resilience level**: strong/exceptional = good capacity, limited = needs rest
-3. Give a clear verdict in Spanish:
-   - **ENTRENA FUERTE** - All indicators green: high readiness, good sleep, HRV above baseline, no recent high-intensity workouts
-   - **ENTRENA MODERADO** - Mixed signals: decent readiness but some fatigue indicators
-   - **RECUPERACION ACTIVA** - Low readiness or poor sleep: suggest light movement only (walking, stretching, yoga)
-   - **DESCANSA** - Multiple red flags: low readiness, poor sleep, declining HRV, high stress
+3. Give a clear verdict:
+   - **TRAIN HARD** - All indicators green: high readiness, good sleep, HRV above baseline, no recent high-intensity workouts
+   - **TRAIN MODERATE** - Mixed signals: decent readiness but some fatigue indicators
+   - **ACTIVE RECOVERY** - Low readiness or poor sleep: suggest light movement only (walking, stretching, yoga)
+   - **REST** - Multiple red flags: low readiness, poor sleep, declining HRV, high stress
 4. Include:
    - The verdict with a brief explanation (2-3 sentences)
    - Key metrics that informed the decision

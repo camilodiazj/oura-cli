@@ -21,7 +21,7 @@ Provide a detailed sleep analysis from Oura Ring data.
    - **HRV**: average HRV during sleep, trend (higher = better recovery)
    - **Timing**: bedtime and wake time consistency (from bedtime_start, bedtime_end)
    - **Restlessness**: restless_periods count, latency (time to fall asleep)
-4. Present the analysis in Spanish with:
+4. Present the analysis in English with:
    - A night-by-night breakdown table
    - Sleep architecture analysis (are you getting enough deep/REM?)
    - Recovery indicators (HRV and HR trends)

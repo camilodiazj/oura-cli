@@ -24,7 +24,7 @@ Generate a weekly health summary with trends from Oura Ring data.
    - **Readiness**: average score, trend (improving/declining/stable), best/worst day
    - **Stress**: average daily stress time vs recovery time, ratio trend
    - **Workouts**: total count, types, total calories burned
-4. Present the summary in Spanish as a structured weekly review with:
+4. Present the summary in English as a structured weekly review with:
    - A header with the date range
    - Key metrics table with daily values
    - Trends section (is sleep improving? is readiness stable?)
